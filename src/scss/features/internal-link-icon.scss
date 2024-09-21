@@ -1,0 +1,61 @@
+@mixin internal-link-icon($bg-img) {
+    color: var(--o-text-color-primary);
+    border-bottom: 1px solid $border-color;
+    text-decoration-line: none;
+
+    &:before {
+        margin-right: 4px;
+        margin-left: 2px;
+    
+        content: '';
+        background-image: $bg-img;
+        background-size: 16px 16px;
+        transform: translate(0, 3px);
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 16.8px;
+        width: 16.33px;
+    }
+    
+
+    &:hover {
+        color: var(--o-text-color-primary);
+        background-color: $internal-link-bg-color-hover;
+        text-decoration: none;
+    }
+    
+
+}
+
+
+
+// 预览模式下添加 icon
+.markdown-rendered .internal-link {
+    @include internal-link-icon($internal-link-icon);
+}
+
+/* 实时编辑模式下双向链接前面添加 icon  */
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link {
+    &:hover {
+        text-decoration-line: none;
+    }
+    
+    .cm-underline {
+        @include internal-link-icon($internal-link-icon);
+    }  
+}
+
+
+
+/* 当双向链接的类型是图片时在其前面添加 图片icon */
+.markdown-preview-view  a.internal-link[href^="image-MOC"]::before {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg t='1626092464076' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='3121' width='200' height='200'%3E%3Cpath d='M266.42944 804.352l123.3408-136.82688a37.93408 37.93408 0 0 1 53.39136-2.90304l81.6896 72.83712a37.92384 37.92384 0 0 0 56.43776-6.76864l99.92704-145.04448a37.91872 37.91872 0 0 1 58.15808-5.12l86.33856 87.31136 66.64704 72.65792-13.9264 60.18048-67.30752 25.46176-529.20832 11.5712z' fill='%23F4CA1C' p-id='3122'%3E%3C/path%3E%3Cpath d='M814.76096 148.48H209.23904A153.26208 153.26208 0 0 0 56.32 301.74208v415.40096A153.26208 153.26208 0 0 0 209.23904 870.4h605.52192A153.26208 153.26208 0 0 0 967.68 717.13792V301.74208A153.26208 153.26208 0 0 0 814.76096 148.48z m83.456 568.65792a83.62496 83.62496 0 0 1-83.456 83.62496H209.23904a83.62496 83.62496 0 0 1-83.456-83.62496V301.74208a83.62496 83.62496 0 0 1 83.456-83.63008h605.52192a83.62496 83.62496 0 0 1 83.456 83.61984v415.40096z m-137.728-298.55744a72.42752 72.42752 0 0 0-111.4112 9.87648l-99.712 145.46432a2.8672 2.8672 0 0 1-2.14528 1.29536 2.81088 2.81088 0 0 1-2.38592-0.75264L463.28832 501.41696a72.52992 72.52992 0 0 0-102.272 5.59104l-123.0848 137.216a34.77504 34.77504 0 1 0 51.67104 46.55616l123.0848-137.216a3.03104 3.03104 0 0 1 4.28544-0.2304l81.51552 73.04192a72.41728 72.41728 0 0 0 108.1088-13.02528l99.71712-145.4592a3.03104 3.03104 0 0 1 4.66432-0.41472l86.15936 87.552a34.78016 34.78016 0 1 0 49.47456-48.896z m-316.2368-33.32608a47.00672 47.00672 0 1 0-46.90432-47.00672 46.95552 46.95552 0 0 0 46.90432 47.00672z' fill='%23595BB3' p-id='3123'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 16px 16px;
+    transform: translate(0, 3px);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16.8px;
+    width: 16.33px;
+    margin-right: 5px;
+}

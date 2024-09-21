@@ -1,0 +1,208 @@
+/* Callouts */
+
+@import './mixins/override_callout';
+
+
+// 预览模式下 callout 添加上下边距
+// .markdown-reading-view div:has(> .callout) {
+//     margin-block-start: 2.5em;
+// }
+
+// callout 公共样式
+.callout {
+    margin: 2rem  0;
+
+    .callout-title {
+        .callout-title-inner {
+            // 标题区域的文字选中时的样式
+            &::selection,
+            a.external-link::selection,
+            a.internal-link::selection,
+            code::selection {
+                color: #fff;
+                background-color: $callout-color-select;
+            }
+
+            a.external-link {
+                color: var(--o-text-color-primary);
+            }
+
+            a.internal-link {
+                color: var(--o-text-color-primary);
+            }
+        }
+        .callout-fold {
+			padding-inline-end: 30px;
+
+			/* 可折叠的 callout 折叠按钮靠右 */
+			margin-left: auto;
+    		justify-content: flex-end;
+
+			.svg-icon {
+				color: var(--o-text-color-primary);
+			}
+		}
+
+        code,mark {
+            color: var(--o-text-color-primary);
+        }
+    }
+
+    .callout-content {
+        a.external-link {
+            color: var(--o-text-color-secondary);
+        }
+
+        a.internal-link {
+            color: var(--o-text-color-secondary);
+        }
+
+        // 正文区域的文字选中时的样式
+        p::selection,
+        ul li::selection,
+        ol li::selection,
+        a::selection,
+        code::selection,
+        em::selection,
+        u::selection {
+            color: #fff;
+            background-color: $callout-color-select;
+        }
+
+        code,mark {
+            color: var(--o-text-color-secondary);
+        }
+
+        // 代码块
+        :not(pre) > code[class*="language-"], 
+        pre[class*="language-"] {
+            background: transparent;
+        }
+
+        blockquote {
+            padding-inline-start: 0;
+            border-inline-start: none;
+            margin-block-start: 1rem;
+            margin-block-end: 0;
+            background-color: transparent;
+
+            // 给其下的 ul, ol, p 添加字体颜色
+            &:has(> ul),
+            &:has(> ol),
+            &:has(> p) {
+                color: var(--o-text-color-primary);
+            }
+        }
+
+        p,ul,ol {
+            margin-block-start: 0.5rem;
+			margin-block-end: 0.5rem;
+        }
+
+        // 任务列表样式
+        ul.contains-task-list {
+            li {
+                margin-inline-start: 1em;
+                &.task-list-item {
+                    margin-inline-start: 0;
+                    .task-list-item-checkbox {
+                        margin-inline-start: 0;
+                        margin-inline-end: 0.4rem;
+                    }
+                
+                }
+            }
+            
+        }
+
+    }
+
+    a.internal-link {
+        border-bottom: 1px solid $border-color;
+        &:hover {
+            background-color: rgba(0,0,0,0.04);
+        }
+    }
+
+    code {
+        border: 1px solid $border-color;
+        background-color: transparent;
+    }
+
+    mark {
+        padding: 2px 2px;
+		font-weight: 400;
+    }
+
+    // callout 里的 badge 样式
+    span.tip,
+    span.info,
+    span.warning,
+    span.danger {
+        border-radius: 4px;
+        line-height: 10px;
+        font-size: 10px;
+        padding: 1px 6px;
+    }
+
+
+    
+}
+
+
+// 取消 编辑按钮背景色
+.markdown-source-view.mod-cm6 .edit-block-button {
+    background-color: unset;    
+}
+
+
+// 覆盖默认的 callout 样式
+
+// success
+.callout[data-callout="success"] {
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z" fill="#2BA471" stroke="#2BA471" stroke-width="4" stroke-linejoin="round"/><path d="M16 24L22 30L34 18" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+	
+	@include override_defult_callout($callout-default-success-bg-color,$callout-default-success-mark-bg-color);
+}
+
+// info|note
+.callout[data-callout="info"],
+.callout[data-callout="note"] {
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z" fill="#0052D9" stroke="#0052D9" stroke-width="4" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 11C25.3807 11 26.5 12.1193 26.5 13.5C26.5 14.8807 25.3807 16 24 16C22.6193 16 21.5 14.8807 21.5 13.5C21.5 12.1193 22.6193 11 24 11Z" fill="#FFF"/><path d="M24.5 34V20H23.5H22.5" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 34H28" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+	@include override_defult_callout($callout-default-info-bg-color,$callout-default-info-mark-bg-color);
+}
+
+
+// warning
+.callout[data-callout="warning"] {
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z" fill="#E37318" stroke="#E37318" stroke-width="4" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 37C25.3807 37 26.5 35.8807 26.5 34.5C26.5 33.1193 25.3807 32 24 32C22.6193 32 21.5 33.1193 21.5 34.5C21.5 35.8807 22.6193 37 24 37Z" fill="#FFF"/><path d="M24 12V28" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+	@include override_defult_callout($callout-default-warning-bg-color,$callout-default-warning-mark-bg-color);
+}
+
+
+// error
+.callout[data-callout="error"] {
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 5L2 43H46L24 5Z" fill="#D54941" stroke="#D54941" stroke-width="4" stroke-linejoin="round"/><path d="M24 35V36" stroke="#FFF" stroke-width="4" stroke-linecap="round"/><path d="M24 19.0005L24.0083 29" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>';
+
+	@include override_defult_callout($callout-default-danger-bg-color,$callout-default-danger-mark-bg-color);
+}
+
+
+// tip|important
+.callout[data-callout="tip"],
+.callout[data-callout="important"] {
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 20C40 26.8077 35.7484 32.6224 29.7555 34.9336H24H18.2445C12.2516 32.6224 8 26.8077 8 20C8 11.1634 15.1634 4 24 4C32.8366 4 40 11.1634 40 20Z" fill="#448aff" stroke="#448aff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M29.7557 34.9336L29.0766 43.0831C29.0334 43.6014 28.6001 44 28.08 44H19.9203C19.4002 44 18.9669 43.6014 18.9238 43.0831L18.2446 34.9336" stroke="#448aff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 17V23L24 20L30 23V17" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+	@include override_defult_callout($callout-default-tip-bg-color,$callout-default-tip-mark-bg-color);
+}
+
+
+// example
+.callout[data-callout="example"] { 
+	--callout-icon: '<svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.5 10H35.5" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.5 6V14" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.5 10L5.5 10" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 24H5.5" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M21.5 20V28" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M43.5 24H21.5" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M41.5 38H35.5" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.5 34V42" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.5 38H5.5" stroke="#7c4dff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+	
+	@include add_custom_block($callout-example-bg-color,$callout-example-border-color);
+
+}

@@ -1,0 +1,77 @@
+
+/* 点击大纲跳转到相应位置时的颜色 */
+.is-flashing {
+    background-color: $title-flashing-color !important;
+}
+.minimal-folding .is-flashing {
+    box-shadow: 5px 1px 0 6px $title-flashing-color; 
+} 
+.is-flashing .tag {
+    border-color: $title-flashing-color !important; 
+}
+
+
+// 高亮字体
+.cm-s-obsidian span.cm-formatting-highlight, 
+.cm-s-obsidian span.cm-highlight,
+.markdown-rendered mark {
+    background-color: $callout-default-normal-mark-bg-color;
+    padding: 3px 5px;
+    border-radius: 2px;
+}
+
+
+.markdown-reading-view  {
+    // 预览模式下设置标题与相邻的 blockquote 的间距
+    div:has(> h1) + div:has(> blockquote),
+    div:has(> h2) + div:has(> blockquote),
+    div:has(> h3) + div:has(> blockquote),
+    div:has(> h4) + div:has(> blockquote),
+    div:has(> h5) + div:has(> blockquote),
+    div:has(> h6) + div:has(> blockquote) {
+        margin-block-start: 2em;
+    }
+
+    // 设置 代码块与标题之间的间距
+    div:has(> h1) + div:has(> .language-css),
+    div:has(> h2) + div:has(> .language-css) {
+        margin-block-start: 2em;
+    }
+    
+}
+
+
+
+// li::marker 的颜色
+.list-bullet:after {
+    color: var(--o-text-color-secondary);
+    background-color: var(--o-text-color-secondary);
+}
+
+
+
+
+// -----------------------------------------------------------
+
+
+// 通过 style setting 插件里的 text 可设置文本颜色以及段落间距
+
+/* 文本选中颜色 */
+// .theme-light {
+//     --text-selection: $text-color-selected;
+
+//     .markdown-rendered pre code,.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+//         --text-selection: rgba(22, 93, 255,0.06);
+//     }
+// }
+
+// .theme-dark {
+//     --text-selection: rgba(255,255,255,0.04);
+
+//     .markdown-rendered pre code,.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+//         --text-selection: rgba(22, 93, 255,0.4);
+//     }
+// }
+
+
+

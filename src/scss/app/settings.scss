@@ -1,0 +1,7 @@
+// 设置里的 button 颜色
+button.mod-cta {
+    background-color: var(--o-brand-color);
+    &:hover {
+        background-color: var(--o-brand-color-hover);
+    }
+}

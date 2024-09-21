@@ -1,0 +1,217 @@
+
+.theme-dark {
+    --o-brand-color-1: #1b2f51;
+    --o-brand-color-2: #173463;
+    --o-brand-color-3: #143975;
+    --o-brand-color-4: #103d88;
+    --o-brand-color-5: #0d429a;
+    --o-brand-color-6: #054bbe;
+    --o-brand-color-7: #2667d4;
+    --o-brand-color-8: #4582e6;
+    --o-brand-color-9: #699ef5;
+    --o-brand-color-10: #96bbf8;
+    --o-warning-color-1: #4f2a1d;
+    --o-warning-color-2: #582f21;
+    --o-warning-color-3: #733c23;
+    --o-warning-color-4: #a75d2b;
+    --o-warning-color-5: #cf6e2d;
+    --o-warning-color-6: #dc7633;
+    --o-warning-color-7: #e8935c;
+    --o-warning-color-8: #ecbf91;
+    --o-warning-color-9: #eed7bf;
+    --o-warning-color-10: #f3e9dc;
+    --o-error-color-1: #472324;
+    --o-error-color-2: #5e2a2d;
+    --o-error-color-3: #703439;
+    --o-error-color-4: #83383e;
+    --o-error-color-5: #a03f46;
+    --o-error-color-6: #c64751;
+    --o-error-color-7: #de6670;
+    --o-error-color-8: #ec888e;
+    --o-error-color-9: #edb1b6;
+    --o-error-color-10: #eeced0;
+    --o-success-color-1: #193a2a;
+    --o-success-color-2: #1a4230;
+    --o-success-color-3: #17533d;
+    --o-success-color-4: #0d7a55;
+    --o-success-color-5: #059465;
+    --o-success-color-6: #43af8a;
+    --o-success-color-7: #46bf96;
+    --o-success-color-8: #80d2b6;
+    --o-success-color-9: #b4e1d3;
+    --o-success-color-10: #deede8;
+    --o-gray-color-1: #f3f3f3;
+    --o-gray-color-2: #eee;
+    --o-gray-color-3: #e8e8e8;
+    --o-gray-color-4: #ddd;
+    --o-gray-color-5: #c6c6c6;
+    --o-gray-color-6: #a6a6a6;
+    --o-gray-color-7: #8b8b8b;
+    --o-gray-color-8: #777;
+    --o-gray-color-9: #5e5e5e;
+    --o-gray-color-10: #4b4b4b;
+    --o-gray-color-11: #393939;
+    --o-gray-color-12: #2c2c2c;
+    --o-gray-color-13: #242424;
+    --o-gray-color-14: #181818;
+
+    // rgb 颜色
+    --o-rgb-example: 179,130,240;
+    --o-rgb-purple: 179,130,240;
+  
+    // 文字 & 图标 颜色
+    --o-font-white-1: rgba(255, 255, 255, 90%);
+    --o-font-white-2: rgba(255, 255, 255, 55%);
+    --o-font-white-3: rgba(255, 255, 255, 35%);
+    --o-font-white-4: rgba(255, 255, 255, 22%);
+    --o-font-gray-1: rgba(0, 0, 0, 90%);
+    --o-font-gray-2: rgba(0, 0, 0, 60%);
+    --o-font-gray-3: rgba(0, 0, 0, 40%);
+    --o-font-gray-4: rgba(0, 0, 0, 26%);
+  
+    // 基础颜色
+    --o-brand-color: var(--o-brand-color-8);     // 色彩-品牌-可操作
+    --o-warning-color: var(--o-warning-color-5); // 色彩-功能-警告
+    --o-error-color: var(--o-error-color-6);     // 色彩-功能-失败
+    --o-success-color: var(--o-success-color-5); // 色彩-功能-成功
+  
+    // 基础颜色的扩展 用于 hover / 聚焦 / 禁用 / 点击 等状态
+    --o-brand-color-hover: var(--o-brand-color-7);     // hover态
+    --o-brand-color-focus: var(--o-brand-color-2);     // focus态，包括鼠标和键盘
+    --o-brand-color-active: var(--o-brand-color-9);    // 点击态
+    --o-brand-color-disabled: var(--o-brand-color-3);  // 禁用态
+    --o-brand-color-light: var(--o-brand-color-1);     // 浅色的选中态
+    --o-brand-color-light-hover: var(--o-brand-color-2);
+  
+    // 警告色扩展
+    --o-warning-color-hover: var(--o-warning-color-4);
+    --o-warning-color-focus: var(--o-warning-color-2);
+    --o-warning-color-active: var(--o-warning-color-6);
+    --o-warning-color-disabled: var(--o-warning-color-3);
+    --o-warning-color-light: var(--o-warning-color-1);
+    --o-warning-color-light-hover: var(--o-warning-color-2);
+  
+    // 失败/错误色扩展
+    --o-error-color-hover: var(--o-error-color-5);
+    --o-error-color-focus: var(--o-error-color-2);
+    --o-error-color-active: var(--o-error-color-7);
+    --o-error-color-disabled: var(--o-error-color-3);
+    --o-error-color-light: var(--o-error-color-1);
+    --o-error-color-light-hover: var(--o-error-color-2);
+  
+    // 成功色扩展
+    --o-success-color-hover: var(--o-success-color-4);
+    --o-success-color-focus: var(--o-success-color-2);
+    --o-success-color-active: var(--o-success-color-6);
+    --o-success-color-disabled: var(--o-success-color-3);
+    --o-success-color-light: var(--o-success-color-1);
+    --o-success-color-light-hover: var(--o-success-color-2);
+  
+    // 遮罩
+    --o-mask-active: rgba(0, 0, 0, 40%); // 遮罩-弹出
+    --o-mask-disabled: rgba(0, 0, 0, 60%); // 遮罩-禁用
+  
+    // 背景色
+    --o-bg-color-page: var(--o-gray-color-14);                        // 色彩 - page
+    --o-bg-color-container: var(--o-gray-color-13);                   // 色彩 - 容器
+    --o-bg-color-container-hover: var(--o-gray-color-12);             // 色彩 - 容器 - hover
+    --o-bg-color-container-active: var(--o-gray-color-10);            // 色彩 - 容器 - active
+    --o-bg-color-container-select: var(--o-gray-color-9);             // 色彩 - 容器 - select
+    --o-bg-color-secondarycontainer: var(--o-gray-color-12);          // 色彩 - 次级容器
+    --o-bg-color-secondarycontainer-hover: var(--o-gray-color-11);    // 色彩 - 次级容器 - hover
+    --o-bg-color-secondarycontainer-active: var(--o-gray-color-9);   // 色彩 - 次级容器 - active
+    --o-bg-color-component: var(--o-gray-color-11);                   // 色彩  - 组件
+    --o-bg-color-component-hover: var(--o-gray-color-10);             // 色彩 - 组件 - hover
+    --o-bg-color-component-active: var(--o-gray-color-9);             // 色彩 - 组件 - active
+    --o-bg-color-secondarycomponent: var(--o-gray-color-10);          // 色彩 - 次级组件
+    --o-bg-color-secondarycomponent-hover: var(--o-gray-color-9);    // 色彩 - 次级组件 - hover
+    --o-bg-color-secondarycomponent-active: var(--o-gray-color-8);   // 色彩 - 次级组件 - active
+    --o-bg-color-component-disabled: var(--o-gray-color-12);          // 色彩 - 组件 - disabled
+    // --o-bg-color-callout-anti: 
+
+    // 特殊组件背景色，目前只用于 button、input 组件多主题场景，浅色主题下固定为白色，深色主题下为 transparent 适配背景颜色
+    --o-bg-color-specialcomponent: transparent;
+  
+    // 文本颜色
+    --o-text-color-primary: var(--o-font-white-1);      // 色彩-文字-主要
+    --o-text-color-secondary: var(--o-font-white-2);    // 色彩-文字-次要
+    --o-text-color-placeholder: var(--o-font-white-3);  // 色彩-文字-占位符/说明
+    --o-text-color-disabled: var(--o-font-white-4);    // 色彩-文字-禁用
+    --o-text-color-anti: #fff;                      // 色彩-文字-反色
+    --o-text-color-brand: var(--o-brand-color-8);           // 色彩-文字-品牌
+    --o-text-color-link: var(--o-brand-color-8);            // 色彩-文字-链接
+    --o-text-color-anti-1: var(--o-font-gray-1);
+    --o-text-color-selected: hsla(0, 0%, calc(15% + 40%), 0.12 );
+
+    // 分割线
+    --o-border-level-1-color: var(--o-gray-color-11);
+    --o-component-stroke: var(--o-gray-color-11);
+    // 边框
+    --o-border-level-2-color: var(--o-gray-color-9);
+    --o-component-border: var(--o-gray-color-9);
+    --o-border-level-3-color: rgba(255,255,255,0.1);
+  
+    // 基础/下层 投影 hover 使用的组件包括：表格 /
+    --o-shadow-1: 0 4px 6px rgba(0, 0, 0, 6%), 0 1px 10px rgba(0, 0, 0, 8%), 0 2px 4px rgba(0, 0, 0, 12%);
+    // 中层投影 下拉 使用的组件包括：下拉菜单 / 气泡确认框 / 选择器 /
+    --o-shadow-2: 0 8px 10px rgba(0, 0, 0, 12%), 0 3px 14px rgba(0, 0, 0, 10%), 0 5px 5px rgba(0, 0, 0, 16%);
+    // 上层投影（警示/弹窗）使用的组件包括：全局提示 / 消息通知
+    --o-shadow-3: 0 16px 24px rgba(0, 0, 0, 14%), 0 6px 30px rgba(0, 0, 0, 12%), 0 8px 10px rgba(0, 0, 0, 20%);
+    // 内投影 用于弹窗类组件（气泡确认框 / 全局提示 / 消息通知）的内描边
+  
+    --o-shadow-inset-top: inset 0 .5px 0 #5e5e5e;
+    --o-shadow-inset-right: inset .5px 0 0 #5e5e5e;
+    --o-shadow-inset-bottom: inset 0 -.5px 0 #5e5e5e;
+    --o-shadow-inset-left: inset -.5px 0 0 #5e5e5e;
+  
+    // table 特定阴影
+    --o-table-shadow-color: rgba(0, 0, 0, 55%);
+  
+    // 滚动条颜色
+    --o-scrollbar-color: rgba(255, 255, 255, 10%);
+    // 滚动条悬浮颜色（ hover ）
+    --o-scrollbar-hover-color: rgba(255, 255, 255, 30%);
+    // 滚动条轨道颜色，不能是带透明度，否则纵向滚动时，横向滚动条会穿透
+    --o-scroll-track-color: #333;
+
+    // 用于 success 等 callout 中的 mark 背景色
+    --o-success-color-disabled-light: var(--o-success-color-disabled);
+    --o-brand-color-disabled-light: var(--o-brand-color-disabled);
+    --o-brand-color-disabled-light-level1: var(--o-brand-color-2);
+    --o-warning-color-disabled-light: var(--o-warning-color-disabled);
+    --o-error-color-disabled-light: var(--o-error-color-disabled);
+    --o-example-color-disabled-light: rgba(var(--o-rgb-purple),0.3);
+    --o-normal-color-disabled-light: rgba(255,255,255,0.06);
+
+    // 内部链接 icon
+    --o-internal-link-customcallout-color-hover: var(--o-text-color-selected);
+    --o-internal-link-defualtcallout-color-hover: var(--o-text-color-selected);
+    --o-internal-link-icon: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 27V6C40 4.89543 39.1046 4 38 4H10C8.89543 4 8 4.89543 8 6V42C8 43.1046 8.89543 44 10 44H21' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 12L31 12' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 20L31 20' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 28H23' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M37 37C37 38.3807 36.4404 39.6307 35.5355 40.5355C34.6307 41.4404 33.3807 42 32 42C29.2386 42 27 39.7614 27 37C27 34.2386 29.2386 32 32 32C34.7614 32 37 34.2386 37 37Z' fill='%232F88FF'/%3E%3Cpath d='M39 44L35.5355 40.5355M35.5355 40.5355C36.4404 39.6307 37 38.3807 37 37C37 34.2386 34.7614 32 32 32C29.2386 32 27 34.2386 27 37C27 39.7614 29.2386 42 32 42C33.3807 42 34.6307 41.4404 35.5355 40.5355Z' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    
+
+    // example callout
+    --o-callout-example-bg-color: rgba(var(--o-rgb-example),0.1);
+    --o-callout-example-border-color: rgba(var(--o-rgb-example),.5);
+
+
+    // highlight callout
+    --o-calloutborder-blue: #203e78;
+    --o-calloutborder-green: #296b22;
+    --o-calloutborder-orange: #845117;
+    --o-calloutborder-purple: #4d2691;
+    --o-calloutborder-red: #6b2827;
+    --o-calloutborder-gray: #434343;
+
+    --o-calloutbg-blue: rgba(76, 136, 255, 0.35);
+    --o-calloutbg-green: rgba(84, 194, 72, 0.28);
+    --o-calloutbg-orange: rgba(242, 150, 44, 0.28);
+    --o-calloutbg-purple: rgba(151, 98, 245, 0.4);
+    --o-calloutbg-red: rgba(240,91,86,0.36);
+    --o-calloutbg-gray: #292929;
+
+    // workspace file and folder
+    --o-workspace-folder-icon: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 8C5 6.89543 5.89543 6 7 6H19L24 12H41C42.1046 12 43 12.8954 43 14V40C43 41.1046 42.1046 42 41 42H7C5.89543 42 5 41.1046 5 40V8Z' fill='none' stroke='%23999999' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M43 22H5' stroke='%23999999' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M5 16V28' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M43 16V28' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    --o-workspace-file-icon: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 6C8 4.89543 8.89543 4 10 4H30L40 14V42C40 43.1046 39.1046 44 38 44H10C8.89543 44 8 43.1046 8 42V6Z' fill='none' stroke='%23999999' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M16 20H32' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 28H32' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    --o-workspace-folder-icon-inbox: url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='6' y='6' width='36' height='36' rx='3' fill='none' stroke='%23999999' stroke-width='4' stroke-linejoin='round'/%3E%3Cpath d='M4 31H15L17 35H31L33 31H44' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M42 36V26' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 36V26' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 15H31' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17 23H31' stroke='%23999999' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    
+}

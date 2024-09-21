@@ -1,0 +1,36 @@
+// badge  基础函数
+@mixin base_badge($badge_bg,$text_color) {
+	background-color: $badge_bg;
+	color: $text_color;
+	font-weight: 500;
+	font-style:normal;
+	vertical-align: super;
+	border-radius: 3px;
+	font-size: 12px;
+	height: 12px;
+	line-height: 12px;
+	letter-spacing: .1em;
+	border: 1px solid transparent;
+	padding: 2px 8px;
+}
+
+
+// tip
+span.tip {
+	@include base-badge($badge-tip-bg-color,$badge-tip-text-color);
+}
+
+// info
+span.info {
+	@include base-badge($badge-info-bg-color,$badge-info-text-color);
+}
+
+// warning
+span.warning {
+	@include base-badge($badge-warning-bg-color,$badge-warning-text-color);
+}
+
+//danger
+span.danger {	
+	@include base-badge($badge-danger-bg-color,$badge-danger-text-color);
+}

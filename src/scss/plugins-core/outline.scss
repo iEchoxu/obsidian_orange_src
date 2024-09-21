@@ -1,0 +1,6 @@
+
+// 右侧大纲视图里的 item 激活时的样式
+body:not(.is-grabbing) .workspace-split.mod-right-split .workspace-tabs .tree-item-self.is-active {
+    color: var(--o-brand-color);
+    background-color: transparent;
+}

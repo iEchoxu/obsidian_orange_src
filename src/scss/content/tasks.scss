@@ -1,0 +1,20 @@
+// 任务列表
+
+// 任务完成态时 Hover 的样式
+input[type=checkbox]:checked:hover {
+    background-color: var(--o-brand-color-active);
+    border-color: var(--o-brand-color-active);
+}
+
+// 任务未完成时 border color
+input[type=checkbox]:hover, 
+input[type=checkbox]:active,
+input[type=checkbox]:focus {
+    border-color: var(--o-brand-color-hover);
+}
+
+
+// 暗黑模式下颜色
+input[type=checkbox]:checked:after {
+    background-color: var(--o-text-color-anti);
+}

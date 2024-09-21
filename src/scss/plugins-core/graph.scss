@@ -1,0 +1,30 @@
+/* 图谱颜色 */
+.graph-view.color-fill,
+.theme-dark .graph-view.color-fill-tag,
+.theme-light .graph-view.color-fill-tag,
+.theme-dark .graph-view.color-fill-attachment,
+.theme-light .graph-view.color-fill-attachment,
+.graph-view.color-fill-focused,
+.graph-view.color-circle {
+    color: rgba(10,89,247);
+}
+.graph-view.color-line {
+    color: rgb(255,198,10,.8);
+}
+.graph-view.color-text {
+    // color: rgba(0,0,0,.9);
+    // opacity: 0.6;
+    color: var(--o-text-color-placeholder);
+    opacity: .6;
+}
+.graph-view.color-arrow {
+    color: #ecaa03;
+    /* color: rgba(0,0,0); */
+}
+.graph-view.color-fill-unresolved {
+     color: rgba(10,89,247,.9);
+}
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+    color: rgba(10,89,247,.8);
+}

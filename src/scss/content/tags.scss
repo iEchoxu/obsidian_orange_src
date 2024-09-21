@@ -1,0 +1,21 @@
+/* Tags */
+
+// 标签点击后跳转的颜色/dataview 关键字查询时高亮的颜色
+.search-result-file-matched-text {
+    // color: #d9e1ff;
+    background-color: transparent;
+}
+
+
+a.tag {
+    padding: 5px 5px;
+    background-color: $tag-default-bg-color;
+	color: $tag-default-text-color;
+	border-radius: 3px;
+}
+
+
+
+
+
+// TODO: 添加 FAQ Error 等标签

@@ -1,0 +1,11 @@
+// 分割线
+
+.markdown-source-view.mod-cm6 hr {
+    border-width: 1px;
+} 
+
+// 预览模式下 hr 样式
+.markdown-rendered hr {
+    border-top: 1px solid;
+    border-color: $divider-color;
+}

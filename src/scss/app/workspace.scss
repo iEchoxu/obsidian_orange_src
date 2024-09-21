@@ -1,0 +1,8 @@
+// siderbar 边框线 hover 时的状态
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover {
+    background-color: $divider-color;
+    border-color: $divider-color;
+}

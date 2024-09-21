@@ -1,0 +1,119 @@
+﻿@import './mixins/add-callout';
+
+
+/* 自定义 callout blocks */
+/* 用 callout blocks 实现高亮块功能 */
+.callout[data-callout="orange"] {
+	@include add_highlight_block($callout-highlight-orange-bg-color,$callout-highlight-orange-border-color,$callout-default-warning-mark-bg-color);
+}
+
+.callout[data-callout="blue"] {
+	@include add_highlight_block($callout-highlight-blue-bg-color,$callout-highlight-blue-border-color,$callout-default-info-mark-bg-color);
+}
+
+.callout[data-callout="red"] {
+	@include add_highlight_block($callout-highlight-red-bg-color,$callout-highlight-red-border-color,$callout-default-danger-mark-bg-color);
+}
+
+.callout[data-callout="green"] {
+	@include add_highlight_block($callout-highlight-green-bg-color,$callout-highlight-green-border-color,$callout-default-success-mark-bg-color);
+}
+
+.callout[data-callout="purple"] {
+	@include add_highlight_block($callout-highlight-purple-bg-color,$callout-highlight-purple-border-color,$callout-default-example-mark-bg-color);
+}
+
+.callout[data-callout="normal"] {
+	@include add_highlight_block($callout-highlight-gray-bg-color,$callout-highlight-gray-border-color,$callout-default-normal-mark-bg-color);
+	border: none;
+}
+
+
+
+
+// border
+.callout[data-callout="border"] {
+	--callout-icon: '';
+
+	min-width: 200px;
+	flex-grow: 1;
+	padding: 1rem 1.5rem;
+	margin: 1rem 0;
+	color: var(--o-text-color-primary);
+    background-color: $callout-border-bg-color;
+    border-radius: .4rem;
+	border: 1px solid $divider-color;
+	
+	.callout-title {
+		border-bottom: 1px solid $divider-color;
+		padding-bottom: 10px;
+
+		.callout-title-inner {
+			color: var(--o-text-color-primary);
+		}
+
+		.callout-icon {
+			display: none;
+		}
+	}
+
+	&:hover {
+		border: 1px solid var(--o-brand-color);
+	}
+
+	.callout-content {
+		margin-top: .5rem;
+		color: var(--o-text-color-primary);
+		--content-line-height: 1.9rem;
+
+		p {
+			margin-block-start: 0;
+			margin-block-end: 0;
+			line-height: var(--content-line-height);
+		}
+
+		ul,ol {
+			padding-inline-start: 0;
+			margin-block-start: 0;
+			margin-block-end: 0;
+			line-height: var(--content-line-height);
+
+			li {
+				margin-inline-start: 1rem;
+				margin-bottom: 0;
+
+				&::marker {
+					color: var(--o-text-color-secondary);
+				}
+			}
+		}
+
+		blockquote {
+			margin-block-start: 0;
+
+			p {
+				color: var(--o-text-color-placeholder);
+			}
+		}
+
+		a.internal-link,
+		a.external-link {
+            color: var(--o-text-color-primary);
+        }
+
+		a.internal-link {
+			&:hover {
+				background-color: $internal-link-bg-color-hover-on-customcallout;
+			}	
+		}
+
+		code {
+            color: var(--o-text-color-primary);
+        }
+	}
+
+	mark {
+		color: var(--o-text-color-primary);
+	}
+
+}

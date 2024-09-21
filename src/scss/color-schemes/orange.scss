@@ -1,0 +1,93 @@
+@import './_light';
+@import './_dark';
+
+
+// badge
+$badge-info-bg-color: var(--o-brand-color-light);
+$badge-info-text-color: var(--o-brand-color);
+$badge-tip-bg-color: var(--o-success-color-light);
+$badge-tip-text-color: var(--o-success-color);
+$badge-warning-bg-color: var(--o-warning-color-light);
+$badge-warning-text-color: var(--o-warning-color);
+$badge-danger-bg-color: var(--o-error-color-light);
+$badge-danger-text-color: var(--o-error-color);
+
+// tag
+$tag-default-bg-color: var(--o-bg-color-secondarycontainer);
+$tag-default-text-color: var(--o-text-color-primary);
+
+
+// default callouts background color
+$callout-default-success-bg-color: var(--o-success-color-focus);
+$callout-default-info-bg-color: var(--o-brand-color-focus);
+$callout-default-tip-bg-color: var(--o-brand-color-light);
+$callout-default-warning-bg-color: var(--o-warning-color-focus);
+$callout-default-danger-bg-color: var(--o-error-color-focus);
+
+// default callouts mark background color
+$callout-default-success-mark-bg-color: var(--o-success-color-disabled-light);
+$callout-default-info-mark-bg-color: var(--o-brand-color-disabled-light);
+$callout-default-tip-mark-bg-color: var(--o-brand-color-disabled-light-level1);
+$callout-default-warning-mark-bg-color: var(--o-warning-color-disabled-light);
+$callout-default-danger-mark-bg-color: var(--o-error-color-disabled-light);
+$callout-default-example-mark-bg-color: var(--o-example-color-disabled-light);
+$callout-default-normal-mark-bg-color: var(--o-normal-color-disabled-light);
+
+// 内部链接hover 时添加的背景颜色
+$internal-link-bg-color-hover: var(--o-bg-color-container-hover);
+$internal-link-icon: var(--o-internal-link-icon);
+$internal-link-bg-color-hover-on-customcallout: var(--o-internal-link-customcallout-color-hover); 
+$internal-link-bg-color-hover-on-defaultcallout: var(--o-internal-link-defualtcallout-color-hover); 
+
+// 边框
+$border-color: var(--o-border-level-3-color);
+
+// 点击大纲跳转到标题的颜色
+$title-flashing-color: var(--o-brand-color-light);
+
+
+// 分割线颜色
+$divider-color: var(--o-border-level-1-color);
+
+// blockquotes
+$blockquote-color: var(--o-border-level-2-color);
+
+
+// callout 文字选中时的背景颜色
+$callout-color-select: var(--o-brand-color-hover);
+
+// inline code
+$inlinecode-color: var(--o-bg-color-secondarycontainer-hover);
+
+// 正文内容选中时的颜色
+$text-color-selected: var(--o-text-color-selected);
+$text-color-anti-1: var(--o-text-color-anti-1);
+
+// border callout
+$callout-border-bg-color: var(--o-bg-color-container);
+
+// example callout
+$callout-example-bg-color: var(--o-callout-example-bg-color);
+$callout-example-border-color: var(--o-callout-example-border-color);
+
+// highlight callout
+$callout-highlight-red-bg-color: var(--o-calloutbg-red);
+$callout-highlight-red-border-color: var(--o-calloutborder-red);
+$callout-highlight-orange-bg-color: var(--o-calloutbg-orange);
+$callout-highlight-orange-border-color: var(--o-calloutborder-orange);
+$callout-highlight-green-bg-color: var(--o-calloutbg-green);
+$callout-highlight-green-border-color: var(--o-calloutborder-green);
+$callout-highlight-blue-bg-color: var(--o-calloutbg-blue);
+$callout-highlight-blue-border-color: var(--o-calloutborder-blue);
+$callout-highlight-purple-bg-color: var(--o-calloutbg-purple);
+$callout-highlight-purple-border-color: var(--o-calloutborder-purple);
+$callout-highlight-gray-bg-color: var(--o-calloutbg-gray);
+$callout-highlight-gray-border-color: var(--o-calloutborder-gray);
+
+// workspace file and folder
+$workspace-folder-icon: var(--o-workspace-folder-icon);
+$workspace-file-icon: var(--o-workspace-file-icon);
+$workspace-folder-icon-inbox: var(--o-workspace-folder-icon-inbox);
+
+
+

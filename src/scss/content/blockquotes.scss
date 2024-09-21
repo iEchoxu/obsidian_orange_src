@@ -1,0 +1,25 @@
+/* Blockquotes */
+
+/* 预览模式下 引用 颜色------因启用了 sytle settings 中的相关设置，这里不启用该代码 */
+// .markdown-preview-view blockquote {
+//     border-left: 2px solid $blockquote-color;
+//     /* margin: 0 0 0 6px; */
+//     margin: 0 0;
+//     margin-block-start: 1.2em;
+// }
+  
+
+
+// 实时编辑模式下 > 前面不添加 border-left 且 字体颜色设置为黑色 */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before,
+.markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+    border-inline-start: none;
+}
+.markdown-source-view.mod-cm6 .HyperMD-quote.HyperMD-quote-1.cm-line .cm-transparent,
+.markdown-source-view.mod-cm6 .HyperMD-quote.HyperMD-quote-2.cm-line .cm-transparent,
+.markdown-source-view.mod-cm6 .HyperMD-quote.HyperMD-quote-3.cm-line .cm-transparent,
+.markdown-source-view.mod-cm6 .HyperMD-callout.cm-line .cm-transparent {
+    color: $blockquote-color;
+}
+
+

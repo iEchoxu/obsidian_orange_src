@@ -1,0 +1,46 @@
+// 参考的是 obsidian minimal src 目录结构
+// link: https://github.com/kepano/obsidian-minimal
+
+// /* Variables */
+@import 'color-schemes/orange';
+
+
+// /* Obsidian app */
+@import 'app/settings';
+@import 'app/workspace';
+
+
+// /* Components */
+
+
+
+// /* Content */
+@import 'content/blockquotes';
+@import 'content/callouts';
+@import 'content/divider';
+@import 'content/tags';
+@import 'content/text';
+@import 'content/tasks';
+// @import 'content/links';
+@import 'content/code';
+@import 'content/table';
+
+
+// /* Orange features */
+@import 'features/columns';
+@import 'features/highlight-block';
+@import 'features/internal-link-icon';
+@import 'features/badge';
+@import 'features/text-flex';
+@import 'features/tag-github';
+@import 'features/workspace-file-dir-icon';
+// @import 'features/dynamic-heading-tagging';
+
+
+// /* Core plugins */
+@import 'plugins-core/outline';
+// @import 'plugins-core/graph';
+
+
+// /* Community plugins */
+// @import 'plugins/dataview';

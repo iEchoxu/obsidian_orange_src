@@ -1,0 +1,144 @@
+// 覆盖默认的 callout 的函数
+@mixin override_defult_callout($callout_bg,$mark_color) {
+	background-color: $callout_bg;
+	padding: 1rem 1.2rem;
+	border-radius: 6px;
+	border: 1px solid $callout_bg;
+
+	.callout-title {
+		line-height: 1.6rem;
+		.callout-title-inner {
+			color: var(--o-text-color-primary);
+			font-weight: 400;
+		}
+	}
+
+	.callout-content {
+		padding: 0;
+		line-height: 1.65rem;
+		margin-top: .5rem;
+
+		p,ul,ol {
+			margin-block-start: 0;
+			margin-block-end: 0;
+			padding-inline-start: 1.2rem;
+			color: var(--o-text-color-secondary);
+		}
+
+		ul,ol {
+			padding-inline-start: 8px;
+			li::marker {
+				color: var(--o-text-color-secondary);
+			}
+		}
+
+		blockquote {
+			margin-block-start: 0;
+
+			p {
+				color: var(--o-text-color-placeholder);
+			}
+
+			li {
+				margin-inline-start: 1em;
+			}
+		}
+	}
+
+	a.internal-link {
+		&:hover {
+			background-color: $internal-link-bg-color-hover-on-defaultcallout;
+		}	
+	}
+
+	mark {
+		border: 1px solid $mark_color;
+		background-color: $mark_color;
+	}
+}
+
+
+// 添加自定义块的函数
+@mixin add_custom_block($bg_color,$custome_border_color) {
+	background-color: $bg_color;
+
+	padding: 0;
+	border: 1px solid $custome_border_color;
+	border-radius: 0.4rem;
+
+	.callout-title {
+		padding: 1rem 20px;
+
+		// callout 标题图标与文字对齐
+        .callout-icon {
+            margin-top: 0;
+        }
+
+		.callout-title-inner {
+			color: var(--o-text-color-primary);
+			font-weight: 500;
+			padding-left: 5px;
+		}
+	}
+
+	.callout-content {
+		background-color: $callout-border-bg-color;
+		padding: 1rem 20px 1.4rem 20px;
+		line-height: 1.65rem;
+		color: var(--o-text-color-primary);
+
+		p,ul,ol {
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
+
+		blockquote {
+			margin-block-start: 0;
+		
+            &:has(> p) {
+                color: var(--o-text-color-placeholder);
+            }
+
+			&:has(> ul),
+            &:has(> ol) {
+				color: var(--o-text-color-primary);
+
+				li {
+					margin-inline-start: 1em;
+				}
+			}
+		}
+
+		ul,ol {
+			padding-inline-start: 0;
+			li {
+				margin-inline-start: 1rem;
+				&::marker {
+					color: var(--o-text-color-secondary);
+				}
+			}
+		}
+
+		a.external-link,
+		a.internal-link {
+			color: var(--o-text-color-primary);
+		}
+
+		a.internal-link {
+			&:hover {
+				background-color: $internal-link-bg-color-hover-on-customcallout;
+			}	
+		}
+
+		code {
+            color: var(--o-text-color-primary);
+        }
+		
+	}
+
+	mark {
+		color: var(--o-text-color-primary);
+	}
+
+	
+}

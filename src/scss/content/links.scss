@@ -1,0 +1,29 @@
+/* Links */
+
+// 编辑模式下样式
+.markdown-source-view.mod-cm6 .cm-link .cm-underline, 
+.markdown-source-view.mod-cm6 .cm-url .cm-underline {
+    color: var(--o-text-color-primary);
+    text-decoration-line: none;
+}
+.markdown-source-view.mod-cm6 .cm-link .cm-underline:hover,
+ .markdown-source-view.mod-cm6 .cm-url .cm-underline:hover {
+    color: var(--o-text-color-primary);
+    text-decoration-line: none;
+    text-decoration: underline var(--o-text-color-primary);
+}
+.cm-s-obsidian span.cm-link:hover {
+    color: var(--o-text-color-primary);
+    text-decoration-line: none;
+    text-decoration: underline var(--o-text-color-primary);
+}
+
+// 预览模式下样式
+.external-link {
+	color: var(--o-text-color-primary);
+	&:hover {
+		color: var(--o-text-color-primary);
+		text-decoration-line: none;
+		text-decoration: underline var(--o-text-color-primary);
+	}
+}

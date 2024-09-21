@@ -1,0 +1,58 @@
+@mixin add_icon_base($base_img){
+    content: '';
+    background-image: $base_img;
+    background-size: var(--nav-item-size) var(--nav-item-size);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: var(--nav-item-size);
+    width: var(--nav-item-size);
+}
+
+@mixin folder_add_icon($img) {
+    @include add_icon_base($img);
+    transform: translate(-4px, 2px);  
+}
+
+@mixin file_add_icon($img) {
+    @include add_icon_base($img);
+    transform: translate(0, 2px);
+    margin-right: 3px;
+}
+
+
+// 文件夹---统一样式
+.tree-item.nav-folder .tree-item-self.mod-collapsible::before {
+    @include folder_add_icon($workspace-folder-icon);
+}
+
+// 文件---统一样式
+.nav-folder-children .nav-file-title-content:first-child::before {
+    @include file_add_icon($workspace-file-icon);
+}
+
+
+// inbox 文件夹样式 
+.tree-item.nav-folder .nav-folder-title[data-path^="inbox"]::before {
+    @include folder_add_icon($workspace-folder-icon-inbox);
+}
+
+// 根目录下的文件添加 icon
+.nav-files-container.node-insert-event .tree-item.nav-file {
+    .nav-file-title  .nav-file-title-content::before {
+        @include file_add_icon($workspace-file-icon);
+    }
+
+    .nav-file-title  .nav-file-title-content {
+        margin-left: -5px;
+    }
+}
+
+// 一级文件夹下的文件与其相邻文件夹对齐
+.tree-item.nav-folder  .nav-file-title .tree-item-inner.nav-file-title-content {
+    margin-left: -5px;
+}
+
+// 二级文件夹下的文件与其相邻文件夹对齐
+.tree-item.nav-folder  .tree-item.nav-folder .nav-file-title .tree-item-inner.nav-file-title-content {
+    margin-left: -6px;
+}

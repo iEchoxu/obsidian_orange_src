@@ -1,0 +1,38 @@
+
+.callout[data-callout="content-flex"] {
+	border-left:none;
+	border-radius:none;
+	box-shadow:none;
+	margin: 0 0;
+	background-color: transparent;
+	padding: 0;
+
+	.callout-title  {
+		display: none;
+	}
+
+	.callout-content {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin: 0 0;
+		overflow-x: unset;
+
+		> *{
+			flex:1;
+			margin: 0;
+			display: flex;
+		}
+
+		ul {
+			display: flex;
+			padding-left: 20px;
+			margin: 0 0 ;
+
+			li {
+				flex:1;
+			}
+		}
+	}
+
+}

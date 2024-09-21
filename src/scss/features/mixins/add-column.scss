@@ -1,0 +1,139 @@
+// callout 标题公共样式
+@mixin callout-title-base() {
+    .callout-title {
+        justify-content: center;
+        align-items: center;
+
+        .callout-icon {
+            display: none;
+        }
+
+        .callout-title-inner {
+            width: 100%;
+            padding: 10px 8px;
+            color: var(--o-text-color-primary);
+        }
+    }
+}
+
+// 添加没有标题背景的 callout
+@mixin callout-title-transparent() {
+    @include callout-title-base();
+
+    .callout-title {
+        .callout-title-inner {
+            border-bottom: 1px solid $divider-color;
+        }
+        
+    }
+    
+    @include callout-content-base();
+}
+
+
+// 添加有标题背景的 callout 
+@mixin callout-title-colored() {
+    @include callout-title-base();
+
+    @include callout-content-base();
+}
+
+
+@mixin callout-content-base() {
+    padding: 0;
+    width: 100%;
+
+    .callout-content {
+        background-color: var(--o-bg-color-container);
+
+        padding: 10px 8px;
+		line-height: 2rem;
+		// margin-top: .5rem;
+		color: var(--o-text-color-primary);
+
+		p,ul,ol {
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
+
+		ul,ol {
+			padding-inline-start: 0;
+			li {
+				margin-inline-start: 1rem;
+				&::marker {
+					color: var(--o-text-color-secondary);
+				}
+			}
+			
+		}
+
+		code {
+            color: var(--o-text-color-primary);
+        }
+
+		a.external-link {
+			color: var(--o-text-color-primary);
+		}
+
+		a.internal-link {
+			color: var(--o-text-color-primary);
+			&:hover {
+				background-color: $internal-link-bg-color-hover-on-customcallout;
+			}
+		}
+
+        blockquote {
+            padding-inline-start: 0;
+            border-inline-start: none;
+            margin-block-start: 0;
+            margin-block-end: 0;
+
+            // 给其下的 ul, ol, p 添加字体颜色
+            &:has(> ul),
+            &:has(> ol) {
+                color: var(--o-text-color-primary);
+            }
+
+            p {
+                color: var(--o-text-color-placeholder);
+            }
+        }
+
+        ul {
+            li {
+                margin-inline-start: 1em;
+                &.task-list-item {
+                    margin-inline-start: 0;
+                    .task-list-item-checkbox {
+                        margin-inline-start: 0;
+                        margin-inline-end: 0.4rem;
+                    }
+                
+                }
+            }
+        }
+    }
+}
+
+
+@mixin add_column($color: null) {
+    @include callout-content-base();
+
+    // 如果 $color 为空，添加没有标题背景的 callout 样式
+    @if $color == null { 
+        --callout-color: 255, 255, 255;
+        @include callout-title-transparent();
+    }
+
+
+    // 如果 $color 不为空，添加有标题背景的 callout 样式
+    @else {
+        --callout-color: #{$color};
+        @include callout-title-colored(); 
+    }
+     
+}
+
+
+
+

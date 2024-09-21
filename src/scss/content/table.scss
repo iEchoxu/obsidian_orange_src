@@ -1,0 +1,78 @@
+// table
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6,
+.markdown-rendered,
+.markdown-reading-view  {
+    // 实时编辑模式下表格与正文内容对齐
+    .cm-embed-block.cm-table-widget.markdown-rendered {
+        padding-inline-start: 0 !important;
+    }
+
+    table {
+        thead {
+            tr {
+                th {
+                    --th-min-height: 2rem;
+                    min-height: var(--th-min-height);
+                    line-height: var(--th-min-height);
+                    text-wrap: nowrap; // 如果不想超出部分的内容换行可注释此行
+                    overflow-x: auto;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                --tr-min-height: 2rem;
+                min-height: var(--tr-min-height);
+                line-height: var(--tr-min-height);
+
+                // tr hover 时的样式
+                &:hover {
+                    background-color: $text-color-selected;
+                    // color: $text-color-anti-1;
+                }
+                &:nth-child(odd):hover {
+                    background-color: $text-color-selected;
+                    // color: $text-color-anti-1;
+                }
+
+                td {
+                    text-wrap: nowrap; // 如果不想超出部分的内容换行可注释此行
+                    overflow-x: auto;
+
+                    code {
+                        background-color: transparent;
+                    }
+                }
+                
+            }
+        }
+    }    
+}
+
+
+// 预览模式下表格与正文内容对齐
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer>div:has(>table) {
+    padding-inline-start: 0;  
+    margin-top: 2rem;
+}
+
+
+// 实时编辑模式下选中整个表格时的样式
+.markdown-source-view.mod-cm6 .cm-table-widget.is-selected table {
+    background-color: $text-color-selected;
+
+    tbody tr:nth-child(odd) {
+        background-color: transparent;
+    }
+
+    code {
+        background-color: transparent;
+    }
+
+    &::after {
+        background-color: transparent;
+    }
+}

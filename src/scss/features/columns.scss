@@ -1,0 +1,59 @@
+@import "./mixins/mcl-multi-column";
+@import "./mixins/add-column";
+
+
+body {
+	--callout-gap: 1em;
+	--callout-min-width: 150px !important;         /* 覆盖 MCL Multi Column.css 中的每个分栏宽度 */
+}
+
+
+
+
+
+/* 预览模式下 上下分栏之间的间距 */
+.markdown-preview-view div[data-callout="multi-column"].callout:not(.is-collapsed) {
+	margin-block-end: 2.5em;
+	margin-block-start: 2.5em;
+}
+
+/* 手机和 pad 不设置上下分栏之间的间距 */
+@media (max-width: 800px) {
+	.markdown-preview-view div[data-callout="multi-column"].callout:not(.is-collapsed) {
+		margin-block-end: 0;
+		margin-block-start: 0;
+	}
+}
+
+
+// 添加分栏
+
+// 添加没有标题背景的 callout
+.callout[data-callout="col-notitlebg"] {
+    @include add_column();
+}
+
+.callout[data-callout="col-lightorange"] {
+    @include add_column("178,122,64");
+}
+
+.callout[data-callout="col-pink"] {
+    @include add_column("178,22,164");
+}
+
+.callout[data-callout="col-lightgreen"] {
+    @include add_column("99,188,76");
+}
+
+.callout[data-callout="col-lightpurple"] {
+    @include add_column("139,65,166");
+}
+
+.callout[data-callout="col-red"] {
+    @include add_column("255,106,106");
+}
+
+.callout[data-callout="col-brown"] {
+    @include add_column("139,71,38");
+}
+

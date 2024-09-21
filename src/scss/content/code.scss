@@ -1,0 +1,26 @@
+// 在代码块里不添加缩进线
+// .markdown-source-view.mod-cm6 .cm-hmd-codeblock .cm-indent::before {
+	// content: none;
+// }
+
+
+// fix: 代码块里的复制按钮显示不全的问题(当代码块中不指定变成语言时会出现此问题)
+.markdown-source-view.mod-cm6 .code-block-flair {
+	padding: 1px var(--size-4-2);
+	// top: 10px;
+	svg.svg-icon {
+		height: 14px;
+		width: 14px;
+	}
+}
+
+
+
+// 行内代码的字体
+.cm-s-obsidian span.cm-inline-code {
+	border: 1px solid $border-color;
+	color: var(--o-text-color-primary);
+	padding: 2px 2px;
+	font-weight: 400;
+	--font-monospace-override: "HarmonyOS Sans SC", "JetBrains Mono";
+}

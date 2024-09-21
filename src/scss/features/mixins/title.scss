@@ -1,0 +1,8 @@
+// 自定义容器块 (类 notion) 的基础样式
+@mixin title-base($content) {
+    content: $content;
+    color: #999999;
+    font-size: 8px;
+    margin-right: 4px;
+    vertical-align: middle;
+}

@@ -1,0 +1,39 @@
+
+// 实时编辑模式下的 github badge 样式
+img[src^="https://img.shields.io"] {
+  width: fit-content !important;
+  margin-right: .5rem;
+  & ~ .external-link {
+    display: none !important;
+    margin-right: 50px !important;
+  }
+  &:hover {
+    cursor: pointer !important;
+  }
+}
+
+
+// 预览模式下的 github badge 样式
+.img-grid .markdown-preview-section>div:has(img[src^="https://img.shields.io"])>p {
+  display: inline-block;
+  
+  a[href*="obsidian://search"] {
+    width: fit-content !important;
+    background-image: unset;
+    padding-inline-end: 0;
+  }
+
+  a.external-link {
+    background-image: none;
+    padding-inline-end: 0;
+  }
+
+  img[referrerpolicy=no-referrer]:active {
+    width: fit-content !important;
+    height: fit-content !important;
+    position: relative !important;
+    cursor:  pointer !important;
+    display: inline-block !important;
+    margin: 0 !important;
+  }
+}

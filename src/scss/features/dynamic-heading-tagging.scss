@@ -1,0 +1,45 @@
+@import './mixins/title.scss';
+
+
+
+// 预览模式下让添加的 H2 等字样以及 > 与文字居中对齐
+.markdown-preview-view .heading-collapse-indicator {
+    margin-top: 10px;
+    &.collapse-indicator {
+        margin-left: -35px;
+    }
+}
+
+
+/* 标题前面添加 h1 这样的小提示 */
+.markdown-preview-view h1:hover .heading-collapse-indicator.collapse-indicator:before  {
+    @include title-base('H1');
+}
+
+/* 标题前面添加 h2 这样的小提示 */
+.markdown-preview-view h2:hover .heading-collapse-indicator.collapse-indicator:before {
+    @include title-base('H2');
+}
+
+/* 标题前面添加 h3 这样的小提示 */
+.markdown-preview-view h3:hover .heading-collapse-indicator.collapse-indicator::before  {
+    @include title-base('H3');
+}
+
+/* 标题前面添加 h4 这样的小提示 */
+.markdown-preview-view h4:hover .heading-collapse-indicator.collapse-indicator::before  {
+    @include title-base('H4');
+}
+
+/* 标题前面添加 h5 这样的小提示 */
+.markdown-preview-view h5:hover .heading-collapse-indicator.collapse-indicator::before  {
+    @include title-base('H5');
+}
+
+/* 标题前面添加 h6 这样的小提示 */
+.markdown-preview-view h6:hover .heading-collapse-indicator.collapse-indicator::before  {
+    @include title-base('H6');
+}
+
+
+  

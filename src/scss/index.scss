@@ -1,5 +1,6 @@
 // 参考的是 obsidian minimal src 目录结构
 // link: https://github.com/kepano/obsidian-minimal
+// obsidian variables: https://docs.obsidian.md/Reference/CSS+variables/CSS+variables
 
 // /* Variables */
 @import 'color-schemes/orange';
@@ -24,6 +25,7 @@
 // @import 'content/links';
 @import 'content/code';
 @import 'content/table';
+@import 'content/list';
 
 
 // /* Orange features */

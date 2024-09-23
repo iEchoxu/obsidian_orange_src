@@ -15,9 +15,16 @@
 }
 
 
-
-// 行内代码的字体
+// 编辑视图下行内代码的字体
 .cm-s-obsidian span.cm-inline-code {
+	border: 1px solid $border-color;
+	color: var(--o-text-color-primary);
+	padding: 2px 2px;
+	font-weight: 400;
+	--font-monospace-override: "HarmonyOS Sans SC", "JetBrains Mono";
+}
+// 预览视图下行内代码的字体
+.markdown-rendered code {
 	border: 1px solid $border-color;
 	color: var(--o-text-color-primary);
 	padding: 2px 2px;

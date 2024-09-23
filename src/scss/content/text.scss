@@ -1,4 +1,3 @@
-
 /* 点击大纲跳转到相应位置时的颜色 */
 .is-flashing {
     background-color: $title-flashing-color !important;
@@ -39,16 +38,6 @@
     }
     
 }
-
-
-
-// li::marker 的颜色
-.list-bullet:after {
-    color: var(--o-text-color-secondary);
-    background-color: var(--o-text-color-secondary);
-}
-
-
 
 
 // -----------------------------------------------------------

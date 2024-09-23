@@ -856,11 +856,6 @@ a.tag {
   margin-block-start: 2em;
 }
 
-.list-bullet:after {
-  color: var(--o-text-color-secondary);
-  background-color: var(--o-text-color-secondary);
-}
-
 /* 文本选中颜色 */
 input[type=checkbox]:checked:hover {
   background-color: var(--o-brand-color-active);
@@ -886,6 +881,14 @@ input[type=checkbox]:checked:after {
 }
 
 .cm-s-obsidian span.cm-inline-code {
+  border: 1px solid var(--o-border-level-3-color);
+  color: var(--o-text-color-primary);
+  padding: 2px 2px;
+  font-weight: 400;
+  --font-monospace-override: "HarmonyOS Sans SC", "JetBrains Mono";
+}
+
+.markdown-rendered code {
   border: 1px solid var(--o-border-level-3-color);
   color: var(--o-text-color-primary);
   padding: 2px 2px;
@@ -959,6 +962,11 @@ input[type=checkbox]:checked:after {
 }
 .markdown-source-view.mod-cm6 .cm-table-widget.is-selected table::after {
   background-color: transparent;
+}
+
+.list-bullet:after {
+  color: var(--o-text-color-secondary);
+  background-color: var(--o-text-color-secondary);
 }
 
 /* === README ===
@@ -3107,7 +3115,7 @@ body {
   text-decoration-line: none;
 }
 .markdown-rendered .internal-link:before {
-  margin-right: 4px;
+  margin-right: 1px;
   margin-left: 2px;
   content: "";
   background-image: var(--o-internal-link-icon);
@@ -3134,7 +3142,7 @@ body {
   text-decoration-line: none;
 }
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-underline:before {
-  margin-right: 4px;
+  margin-right: 1px;
   margin-left: 2px;
   content: "";
   background-image: var(--o-internal-link-icon);

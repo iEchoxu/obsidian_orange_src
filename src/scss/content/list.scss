@@ -1,0 +1,5 @@
+// li::marker 的颜色
+.list-bullet:after {
+    color: var(--o-text-color-secondary);
+    background-color: var(--o-text-color-secondary);
+}
